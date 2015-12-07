@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <script src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <style>
+        .box {width: 100px;height: 100px;background:#fff;border-radius:4px;border:1px dashed #000;padding: 5px;float: left;margin: 10px;}
+        .item {width: 25px;height: 25px;border-radius:100%;background:#000;margin: 2px;}
+        .clear {clear:both;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1>单项目</h1>
+        </div>
+        <style>
+            .box1  {display:flex;}
+        </style>
+        <div class="box box1">
+            <span class="item"></span>
+        </div>
+
+        <style>
+            .box2  {
+                display:flex;
+                justify-content: center;
+            }
+        </style>
+        <div class="box box2">
+            <span class="item"></span>
+        </div>
+
+        <style>
+            .box3  {
+                display:flex;
+                justify-content: flex-end;
+            }
+        </style>
+        <div class="box box3">
+            <span class="item"></span>
+        </div>
+
+        <style>
+            .box4  {
+                display:flex;
+                align-items: center;
+            }
+        </style>
+        <div class="box box4">
+            <span class="item"></span>
+        </div>
+
+        <style>
+            .box5  {
+                display:flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+        <div class="box box5">
+            <span class="item"></span>
+        </div>
+
+        <style>
+            .box6  {
+                display:flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+        </style>
+        <div class="box box6">
+            <span class="item"></span>
+        </div>
+
+        <style>
+            .box7  {
+                display:flex;
+                align-items: flex-end;
+            }
+        </style>
+        <div class="box box7">
+            <span class="item"></span>
+        </div>
+
+        <style>
+            .box8  {
+                display:flex;
+                justify-content: center;
+                align-items: flex-end;
+            }
+        </style>
+        <div class="box box8">
+            <span class="item"></span>
+        </div>
+
+        <style>
+            .box9  {
+                display:flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+            }
+        </style>
+        <div class="box box9">
+            <span class="item"></span>
+        </div>
+
+        <div class="clear"></div>
+        <div class="page-header">
+            <h1>双项目</h1>
+        </div>
+
+        <style>
+            .box10  {
+                display:flex;
+                justify-content: space-between;
+            }
+        </style>
+        <div class="box box10">
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+
+        <style>
+            .box11  {
+                display:flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        </style>
+        <div class="box box11">
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+
+        <style>
+            .box12  {
+                display:flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+            }
+        </style>
+        <div class="box box12">
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+
+        <style>
+            .box13  {
+                display:flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-end;
+            }
+        </style>
+        <div class="box box13">
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+
+        <style>
+            .box14  {
+                display:flex;
+            }
+            .box14 .item:nth-child(2) {
+                align-self: center;
+            }
+        </style>
+        <div class="box box14">
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+
+        <style>
+            .box15  {
+                display:flex;
+                justify-content: space-between;
+            }
+            .box15 .item:nth-child(2) {
+                align-self: flex-end;
+            }
+        </style>
+        <div class="box box15">
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+
+        <div class="clear"></div>
+        <div class="page-header">
+            <h1>三项目</h1>
+        </div>
+
+        <style>
+            .box16  {
+                display:flex;
+                justify-content: space-between;
+            }
+            .box16 .item:nth-child(2) {
+                align-self: center;
+            }
+            .box16 .item:nth-child(3) {
+                align-self: flex-end;
+            }
+        </style>
+        <div class="box box16">
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+
+        <div class="clear"></div>
+        <div class="page-header">
+            <h1>四项目</h1>
+        </div>
+
+        <style>
+            .box17  {
+                display:flex;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                align-content: space-between;
+            }
+        </style>
+        <div class="box box17">
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+
+        <style>
+            .box18 {
+                display:flex;
+                flex-wrap: wrap;
+                align-content: space-between;
+            }
+            .box18 .column {
+                flex-basis: 100%;
+                display:flex;
+                justify-content: space-between;
+            }
+        </style>
+        <div class="box box18">
+            <div class="column">
+                <span class="item"></span>
+                <span class="item"></span>
+            </div>
+            <div class="column">
+                <span class="item"></span>
+                <span class="item"></span>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+        <div class="page-header">
+            <h1>六项目</h1>
+        </div>
+
+        <style>
+            .box19 {
+                display:flex;
+                flex-wrap: wrap;
+                align-content: space-between;
+            }
+        </style>
+        <div class="box box19">
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+
+        <style>
+            .box20 {
+                display:flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-content: space-between;
+            }
+        </style>
+        <div class="box box20">
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+
+        <style>
+            .box21 {
+                display:flex;
+                flex-wrap: wrap;
+            }
+            .box21 .roww {
+                flex-basis: 100%;
+                display:flex;
+            }
+            .box21 .roww:nth-child(2){
+                justify-content: center;
+            }
+            .box21 .roww:nth-child(3){
+                justify-content: space-between;
+            }
+        </style>
+        <div class="box box21">
+            <div class="roww">
+                <span class="item"></span>
+                <span class="item"></span>
+                <span class="item"></span>
+            </div>
+            <div class="roww">
+                <span class="item"></span>
+            </div>
+            <div class="roww">
+                <span class="item"></span>
+                <span class="item"></span>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+        <div class="page-header">
+            <h1>九项目</h1>
+        </div>
+
+        <style>
+            .box22 {
+                display:flex;
+                flex-wrap: wrap;
+            }
+        </style>
+        <div class="box box22">
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+
+    </div>
+</body>
+</html>

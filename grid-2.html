@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <script src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <style>
+        .Site {
+          display: flex;
+          min-height: 100vh;
+          flex-direction: column;
+        }
+
+        .Site-content {
+          flex: 1;
+        }
+        main {padding:0 20px;}
+        header,footer {width: 100%;height: 50px;background:rgba(0,0,0,0.5);color:#fff;text-align:center;line-height:50px;}
+    </style>
+</head>
+<body class="Site">
+        <header>header</header>
+
+        <main class="Site-content">
+            <div class="page-header">
+                <h1>固定的底栏</h1>
+                <p>有时，页面内容太少，无法占满一屏的高度，底栏就会抬高到页面的中间。这时可以采用Flex布局，让底栏总是出现在页面的底部。</p>
+            </div>
+        </main>
+
+        <footer>footer</footer>
+
+</body>
+</html>

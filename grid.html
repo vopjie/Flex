@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <script src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <style>
+        .grid {
+            display:flex;
+        }
+        .grid-cell {
+            flex:1;
+            min-height: 50px;border-radius: 4px;background:orange;margin: 10px;text-align:center;line-height: 50px;padding:10px 15px;}
+        .grid-cell p {text-align:left;line-height:30px;}
+        .clear {clear:both;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1>基本网格布局</h1>
+            <p>最简单的网格布局，就是平均分布。在容器里面平均分配空间，但是需要设置项目的自动缩放。</p>
+        </div>
+        <div class="grid">
+             <div class="grid-cell">1/2</div>
+             <div class="grid-cell">1/2</div>
+         </div>
+         <div class="grid">
+             <div class="grid-cell">1/3</div>
+             <div class="grid-cell">1/3</div>
+             <div class="grid-cell">1/3</div>
+         </div>
+         <div class="grid">
+             <div class="grid-cell">1/4</div>
+             <div class="grid-cell">1/4</div>
+             <div class="grid-cell">1/4</div>
+             <div class="grid-cell">1/4</div>
+         </div>
+         <div class="grid">
+             <div class="grid-cell">
+                 <p>Angular Prefixes $ and $$: To prevent accidental name collisions with your code, Angular prefixes names of public objects with $ and names of private objects with $$. Please do not use the $ or $$ prefix in your code.</p>
+             </div>
+             <div class="grid-cell">
+                 <p>This module is provided by default and contains the core components of AngularJS.</p>
+             </div>
+         </div>
+
+         <div class="page-header">
+            <h1>百分比布局</h1>
+            <p>某个网格的宽度为固定的百分比，其余网格平均分配剩余的空间。</p>
+        </div>
+
+        <style>
+            .grid2 {display:flex;}
+            .grid-cell {
+                flex: 1;
+            }
+            .grid2 .u-full {
+                flex:0 0 100%;
+            }
+            .grid2 .u-1of2 {
+                flex:0 0 50%;
+            }
+            .grid2 .u-1of3 {
+                flex:0 0 33.3333%;
+            }
+            .grid2 .u-1of4 {
+                flex:0 0 25%;
+            }
+        </style>
+        <div class="grid2">
+            <div class="grid-cell u-1of2">1/2</div>
+            <div class="grid-cell">auto</div>
+            <div class="grid-cell">auto</div>
+        </div>
+        <div class="grid2">
+            <div class="grid-cell">auto</div>
+            <div class="grid-cell u-1of3">1/3</div>
+        </div>
+        <div class="grid2">
+            <div class="grid-cell u-1of4">1/4</div>
+            <div class="grid-cell">auto</div>
+            <div class="grid-cell u-1of3">1/3</div>
+        </div>
+
+        <div class="page-header">
+            <h1>圣杯布局</h1>
+            <p>圣杯布局（Holy Grail Layout）指的是一种最常见的网站布局。页面从上到下，分成三个部分：头部（header），躯干（body），尾部（footer）。其中躯干又水平分成三栏，从左到右为：导航、主栏、副栏。</p>
+        </div>
+        <style>
+            .HolyGrail {
+                display:flex;
+                flex-direction: column;
+            }
+            header,footer {
+                flex: 1;
+                background:#ccc;
+                height: 50px;
+            }
+            .HolyGrail-body {
+                display:flex;
+                flex:1;
+                height: 200px;
+            }
+            .HolyGrail-content {
+                flex:1;
+                background:#169fe6;
+            }
+            .HolyGrail-nav,.HolyGrail-ads {
+                flex:0 0 20%;
+                background:orange;
+            }
+            .HolyGrail-nav {order:-1;}
+
+            @media (max-width:768px){
+                .HolyGrail-body {
+                    flex-direction: column;
+                    flex:1;
+                }
+                .HolyGrail-content,.HolyGrail-nav,.HolyGrail-ads {
+                    flex:auto;
+                }
+            }
+        </style>
+        <div class="HolyGrail">
+            <header>#header</header>
+            <div class="HolyGrail-body">
+                <main class="HolyGrail-content">main</main>
+                <nav class="HolyGrail-nav">nav</nav>
+                <aside class="HolyGrail-ads">aside</aside>
+            </div>
+            <footer>#footer</footer>
+        </div>
+
+        <div class="page-header">
+            <h1>输入框的布局</h1>
+            <p>我们常常需要在输入框的前方添加提示，后方添加按钮。</p>
+        </div>
+
+        <style>
+            .InputAddOn {
+                display: flex;
+                height: 40px;
+            }
+            .InputAddOn-field {
+                flex: 1;
+            }
+            .InputAddOn-item {border:1px solid #aaa;border-radius:2px 0 0 2px;border-right:none;width: 50px;text-align:center;line-height:40px;}
+            .InputAddOn-btn {border:1px solid #aaa;border-radius:0 2px 2px 0;border-left:none;width: 80px;}
+        </style>
+        <div class="InputAddOn">
+            <span class="InputAddOn-item">@</span>
+            <input class="InputAddOn-field">
+            <button class="InputAddOn-btn">send</button>
+        </div>
+
+        <div class="page-header">
+            <h1>悬挂式布局</h1>
+            <p>有时，主栏的左侧或右侧，需要添加一个图片栏。</p>
+        </div>
+        <style>
+            .Media { display: flex; align-items: flex-start; }
+            .Media-figure { margin-right: 1em; }
+            .Media-body { flex: 1; }
+        </style>
+        <div class="Media">
+           <img class="Media-figure" src="img.JPG" alt="" width="40" height="40">
+           <p class="Media-body">Angular Prefixes $ and $$: To prevent accidental name collisions with your code, Angular prefixes names of public objects with $ and names of private objects with $$. Please do not use the $ or $$ prefix in your code.Angular Prefixes $ and $$: To prevent accidental name collisions with your code, Angular prefixes names of public objects with $ and names of private objects with $$. Please do not use the $ or $$ prefix in your code.</p>
+        </div>
+
+    </div>
+</body>
+</html>
